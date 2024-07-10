@@ -139,6 +139,8 @@ class TestApp:
                     "restaurant_id": restaurant.id,
                 }
             )
+            
+            print(response.get_json())
 
             assert response.status_code == 201
             assert response.content_type == 'application/json'
